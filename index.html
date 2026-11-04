@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex">
+<title>GrantFinch</title>
+<meta name="description" content="Life-science funding, ranked for your research. An early test version that runs on your own computer.">
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+:root { color-scheme: light dark; --bg: #f4f6f5; --surface: #fff; --fg: #16201b; --muted: #55635b; --line: #d9e0dc; --accent: #12694b; --accent-fg: #fff; --band: #e6f1eb; --warn: #fdf0d9; --warn-fg: #6d4000; }
+@media (prefers-color-scheme: dark) { :root { --bg: #141619; --surface: #1e2125; --fg: #eceef0; --muted: #a9b0b7; --line: #33373d; --accent: #5ac8a0; --accent-fg: #0b1a14; --band: #232c28; --warn: #382a12; --warn-fg: #f0b252; } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header { background: var(--band); padding: 28px 0 32px; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 20px; }
+.brand img { border-radius: 9px; }
+h1 { font-size: clamp(28px, 6vw, 40px); line-height: 1.15; letter-spacing: -.02em; margin: 20px 0 8px; }
+h2 { font-size: 20px; margin: 0 0 8px; letter-spacing: -.01em; }
+header p { margin: 0; color: var(--muted); max-width: 60ch; }
+main { padding: 8px 0 48px; }
+section { margin-top: 16px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow-wrap: anywhere; }
+.note { background: var(--warn); color: var(--warn-fg); border-color: transparent; }
+.downloads { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); margin-top: 12px; }
+.btn { display: block; padding: 12px 16px; border-radius: 10px; background: var(--accent); color: var(--accent-fg); font-weight: 600; text-decoration: none; text-align: center; }
+.btn small { display: block; font-weight: 400; opacity: .85; }
+a { color: var(--accent); }
+.note a { color: inherit; }
+ul, ol { margin: 8px 0 0; padding-left: 20px; }
+li + li { margin-top: 6px; }
+h3 { font-size: 16px; margin: 16px 0 0; }
+.muted { color: var(--muted); font-size: 14px; }
+footer { padding-bottom: 40px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><img src="icon.png" alt="" width="40" height="40">GrantFinch</div>
+  <h1>Life-science funding, ranked for your research</h1>
+  <p>GrantFinch gathers open calls for life scientists, reads what each one is about, and ranks them for your work and career stage. It runs on your own computer.</p>
+</div></header>
+<main class="wrap">
+  <section class="note"><b>This is an early test version</b>, shared with a few people for feedback. It covers the life sciences only, and the AI can be wrong, so always check the funder's page.</section>
+
+  <section>
+    <h2>Download</h2>
+    <div class="downloads">
+      <a class="btn" href="https://github.com/WalterC85/grantfinch/releases/latest/download/GrantFinch-mac-apple-silicon.dmg">Mac<small>Apple Silicon: M1 or newer</small></a>
+      <a class="btn" href="https://github.com/WalterC85/grantfinch/releases/latest/download/GrantFinch-windows-x64-setup.exe">Windows<small>64-bit</small></a>
+      <a class="btn" href="https://github.com/WalterC85/grantfinch/releases/latest/download/GrantFinch-linux-x64.deb">Linux<small>Ubuntu or Debian, 64-bit</small></a>
+    </div>
+    <p class="muted">Other Linux: <a href="https://github.com/WalterC85/grantfinch/releases/latest/download/GrantFinch-linux-x64.tar.gz">.tar.gz</a>. <a href="https://github.com/WalterC85/grantfinch/releases/latest">All files, versions and checksums</a>.</p>
+  </section>
+
+  <section>
+    <h2>Install</h2>
+    <p>The app isn't signed with a paid developer certificate yet, so your computer warns you the first time.</p>
+    <h3>Mac</h3>
+    <ol><li>Open the file and drag GrantFinch to Applications.</li><li>Open GrantFinch. The Mac says it can't check the app.</li><li>Go to System Settings → Privacy &amp; Security, scroll down, and press <b>Open Anyway</b>. You only do this once.</li></ol>
+    <h3>Windows</h3>
+    <ol><li>Run the file. If Windows says it protected your PC, press <b>More info</b>, then <b>Run anyway</b>.</li><li>Follow the installer. It doesn't need administrator rights.</li></ol>
+    <h3>Linux</h3>
+    <ol><li>In a terminal, in the folder with the file: <code>sudo apt install ./GrantFinch-linux-x64.deb</code></li><li>Find GrantFinch in your applications.</li></ol>
+    <h3>Updating</h3>
+    <p>When a newer version exists, the app tells you. Download it and install it over the old one: your profiles and favourites stay. On Mac, quit GrantFinch first.</p>
+  </section>
+
+  <section>
+    <h2>Turn on the local AI</h2>
+    <p>GrantFinch works without it, ranking calls by shared words. With it, you get ranking by meaning and a "Best fits" section.</p>
+    <ol><li>Install <a href="https://ollama.com/download">Ollama</a>, a free program, and open it.</li><li>In GrantFinch, go to Profile settings → Local AI and press the download buttons. Ranking by meaning takes 0.6 GB. Best fits and summaries takes 7.7 GB, and needs 16 GB of memory or more to run well.</li></ol>
+  </section>
+
+  <section>
+    <h2>What stays on your computer</h2>
+    <p>Your profile, favourites and shortlists stay on your computer, and the AI runs there too. The app connects to the internet only to:</p>
+    <ul><li>check funders' public websites for new calls, once a day;</li><li>read your public papers from ORCID and OpenAlex, only if you enter an ORCID iD;</li><li>download the AI models, when you press the buttons;</li><li>see whether a newer version exists, once a day, sending nothing about you or your profile;</li><li>open the feedback form, a Google Form, when you click it: what you write there goes through Google.</li></ul>
+    <p>There is no password: while GrantFinch is running, anyone logged in to this computer, on any account, can open it and see your data. On a computer you share, quit it when you're done.</p>
+  </section>
+</main>
+<footer class="wrap">Problems or ideas? <a href="https://forms.gle/hQgu6GtLMg4RYhDX7">Send feedback</a>. GrantFinch is a proof of concept, offered as is. This page uses no cookies or tracking.</footer>
+</body>
+</html>
