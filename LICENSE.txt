@@ -1,0 +1,26 @@
+GrantFinch licence
+
+Copyright (c) 2026 the author of GrantFinch. All rights reserved.
+
+1. Use. You may download, install and use GrantFinch free of charge, on your own computers, for
+   your own research and your group's.
+
+2. What you may not do. You may not sell, rent or hand out copies of GrantFinch or of changed
+   versions of it, and you may not take it apart to reuse its code, except as far as the law
+   allows. You are welcome to share the link to the download page.
+
+3. The calls. GrantFinch shows open funding calls taken from funders' public websites. They belong
+   to the funders. GrantFinch isn't linked to or endorsed by any of them. Calls can be missing,
+   closed or changed, and the summaries and fit checks are written by an AI that can be wrong:
+   always check the call on the funder's own page before you apply.
+
+4. No warranty. GrantFinch is offered "as is", without any warranty. As far as the law allows, its
+   author is not liable for any loss or damage from using it, including a missed deadline or an
+   application that wasn't funded.
+
+5. Other software. GrantFinch includes software and fonts by others, each under its own licence:
+   see THIRD-PARTY-NOTICES.txt, next to this file in the app
+   (in the menu: Licence and notices).
+
+6. Changes. A new version of GrantFinch may come with new terms. The version you installed keeps
+   the terms it came with.
